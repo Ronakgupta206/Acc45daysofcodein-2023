@@ -1,0 +1,12 @@
+int main() {
+    int N;
+    printf("Enter the numbers of friends : ");
+    scanf("%d",&N);
+    
+    if(N<=4){
+        printf("Cars required : 1");
+    }else{
+        printf("Cars reqired : %d",(N+3)/4);
+    }
+    return 0;
+}
