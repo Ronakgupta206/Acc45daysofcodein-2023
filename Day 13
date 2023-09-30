@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main() {
+    double X;  // grams of Helium-3 from the moon
+    double Y;  // units of power per gram
+    double A;  // required units of power per year
+    int B;     // number of years for the project
+
+    // Prompt the user for input
+    printf("Enter the amount of Helium-3 (in grams) from the moon: ");
+    scanf("%lf", &X);
+    printf("Enter the units of power per gram of Helium-3: ");
+    scanf("%lf", &Y);
+    printf("Enter the required units of power per year: ");
+    scanf("%lf", &A);
+    printf("Enter the number of years for the project: ");
+    scanf("%d", &B);
+
+    // Calculate the total power generated and funding requirement
+    double totalPower = X * Y;
+    double fundingRequirement = A * B;
+
+    // Check if the project will get funded
+    if (totalPower >= fundingRequirement) {
+        printf("The project will get funded.\n");
+    } else {
+        printf("The project will not get funded.\n");
+    }
+
+    return 0;
+}
