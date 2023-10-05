@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int A, B;
+    
+    // Input Alice's and Bob's scores
+    printf("Enter Alice's score (A): ");
+    scanf("%d", &A);
+    printf("Enter Bob's score (B): ");
+    scanf("%d", &B);
+
+    int remaining_points = 7 - A > 7 - B ? 7 - A : 7 - B;
+    
+    printf("The minimum number of points that will be further scored in the match: %d\n", remaining_points);
+    
+    return 0;
+}
