@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int X, Y;
+    scanf("%d %d", &X, &Y);
+
+    int diff = abs(Y - X); // Calculate the absolute difference between X and Y
+    int presses = diff / 11; // Divide by 11 to find the number of 11-volume change steps
+    int remainder = diff % 11; // Calculate the remainder for any additional steps
+
+    if (remainder > 0) {
+        presses++; // If there's a remainder, one more press is needed
+    }
+
+    printf("%d\n", presses);
+
+    return 0;
+}
