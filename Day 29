@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    double alice, bob, charlie, cost;
+    
+    // Input the amounts Alice, Bob, Charlie have and the cost of the subscription
+    printf("Enter the amount Alice has: ");
+    scanf("%lf", &alice);
+    printf("Enter the amount Bob has: ");
+    scanf("%lf", &bob);
+    printf("Enter the amount Charlie has: ");
+    scanf("%lf", &charlie);
+    printf("Enter the cost of the Netflix subscription: ");
+    scanf("%lf", &cost);
+
+    // Check if any two of them can contribute enough money
+    if ((alice + bob >= cost) || (alice + charlie >= cost) || (bob + charlie >= cost)) {
+        printf("Yes, two of them can contribute to buy the subscription.\n");
+    } else {
+        printf("No, they cannot contribute enough to buy the subscription.\n");
+    }
+
+    return 0;
+}
