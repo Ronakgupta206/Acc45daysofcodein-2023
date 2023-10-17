@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int C, X, Y;
+    
+    // Input the values of C, X, and Y
+    printf("Enter the number of chocolates Chef wants to gift (C): ");
+    scanf("%d", &C);
+    printf("Enter the number of chocolates Chef has (X): ");
+    scanf("%d", &X);
+    printf("Enter the cost of 1 chocolate (Y): ");
+    scanf("%d", &Y);
+
+    if (C <= X) {
+        // Chef already has enough chocolates, so no additional spending is needed
+        printf("Chef doesn't need to spend any money.\n");
+    } else {
+        // Calculate the minimum money Chef needs to spend
+        int extra_chocolates = C - X;
+        int money_needed = extra_chocolates * Y;
+        printf("Chef needs to spend %d rupees to gift %d chocolates to Botswal.\n", money_needed, C);
+    }
+
+    return 0;
+}
