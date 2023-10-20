@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int X, Y;
+    printf("Enter initial location of the policeman (X): ");
+    scanf("%d", &X);
+    printf("Enter initial location of the thief (Y): ");
+    scanf("%d", &Y);
+
+    // Calculate the minimum time for the policeman to catch the thief
+    int time = (Y - X) / 3;  // The policeman is 2x faster than the thief
+
+    if ((Y - X) % 3 != 0) {
+        time++; // If there is a remainder, add 1 more second
+    }
+
+    printf("The minimum time for the policeman to catch the thief is: %d seconds\n", time);
+
+    return 0;
+}
