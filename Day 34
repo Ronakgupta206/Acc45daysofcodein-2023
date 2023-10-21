@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y, A, B;
+    
+    // Input the values of X, Y, A, and B
+    printf("Enter the values of X, Y, A, and B: ");
+    scanf("%d %d %d %d", &X, &Y, &A, &B);
+
+    // Calculate the temperature after using X liters of hot water
+    int temp = A + X;
+
+    // Calculate the temperature after using Y liters of cold water
+    temp -= Y;
+
+    // Check if the final temperature matches B
+    if (temp == B) {
+        printf("Chef can set the temperature to %d degrees for a perfect bath.\n", B);
+    } else {
+        printf("Chef cannot set the temperature to %d degrees for a perfect bath.\n", B);
+    }
+
+    return 0;
+}
