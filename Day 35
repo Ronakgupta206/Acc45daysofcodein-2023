@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int W, X, Y, Z;
+
+    // Input the weight of the object and the weights of X, Y, and Z
+    scanf("%d %d %d %d", &W, &X, &Y, &Z);
+
+    // Check if it's possible to measure the weight
+    if (W == X || W == Y || W == Z || W == X + Y || W == X + Z || W == Y + Z || W == X + Y + Z) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
