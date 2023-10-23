@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int total_plates = 20; // Total number of plates Chef prepared
+    int plates_per_neighbor = 5; // Number of plates each neighbor takes
+
+    int max_neighbors_fed = total_plates / plates_per_neighbor;
+
+    printf("Chef can feed a maximum of %d neighbors completely.\n", max_neighbors_fed);
+
+    return 0;
+}
