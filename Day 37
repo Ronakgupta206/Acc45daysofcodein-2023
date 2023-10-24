@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+int main() {
+    int S, X, Y, Z;
+    
+    printf("Enter total storage capacity (S MB): ");
+    scanf("%d", &S);
+    
+    printf("Enter memory occupied by the first app (X MB): ");
+    scanf("%d", &X);
+    
+    printf("Enter memory occupied by the second app (Y MB): ");
+    scanf("%d", &Y);
+    
+    printf("Enter memory requirement of the third app (Z MB): ");
+    scanf("%d", &Z);
+    
+    int appsToDelete = 0;
+    
+    if (X + Y + Z > S) {
+        if (X > Y) {
+            if (X > Z) {
+                appsToDelete = 1;
+            } else {
+                appsToDelete = 2;
+            }
+        } else {
+            if (Y > Z) {
+                appsToDelete = 1;
+            } else {
+                appsToDelete = 2;
+            }
+        }
+    }
+    
+    printf("Minimum number of apps to delete: %d\n", appsToDelete);
+    
+    return 0;
+}
