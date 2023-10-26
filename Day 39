@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    // Define export and import values for countries A and B
+    int exportA1 = 100;  // Replace with actual export value for country A
+    int importA2 = 80;   // Replace with actual import value for country A
+    int exportB1 = 120;  // Replace with actual export value for country B
+    int importB2 = 150;  // Replace with actual import value for country B
+
+    // Calculate trade balance for countries A and B
+    int tradeBalanceA = exportA1 - importA2;
+    int tradeBalanceB = exportB1 - importB2;
+
+    // Check if country C is in trade surplus
+    if (tradeBalanceA > 0 && tradeBalanceB > 0) {
+        printf("Country C is in trade surplus.\n");
+    } else {
+        printf("Country C is not in trade surplus.\n");
+    }
+
+    return 0;
+}
