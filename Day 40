@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int X;
+    scanf("%d", &X);
+    
+    if (X % 5 != 0) {
+        // It's impossible to pay X rupees using only 5 and 10 rupee coins.
+        printf("-1\n");
+    } else {
+        if (X % 10 == 0) {
+            // Chef can use all 10 rupee coins.
+            printf("%d\n", X / 10);
+        } else {
+            // Chef can use (X / 10) * 2 5-rupee coins and the rest in 10-rupee coins.
+            printf("%d\n", (X / 10) * 2 + (X % 10) / 5);
+        }
+    }
+    
+    return 0;
+}
