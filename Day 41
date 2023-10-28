@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int N; // Number of days until Halloween
+    int favoriteDay = 2; // Tuesday (0=Sunday, 1=Monday, 2=Tuesday, ...)
+    int daysPerWeek = 7;
+    
+    printf("Enter the number of spooky days left until Halloween: ");
+    scanf("%d", &N);
+    
+    int remainingDays = N;
+    int count = 0;
+    int currentDay = 1; // Today is Monday (0=Sunday, 1=Monday, 2=Tuesday, ...)
+    
+    while (remainingDays > 0) {
+        if (currentDay == favoriteDay) {
+            count++;
+        }
+        currentDay = (currentDay + 1) % daysPerWeek;
+        remainingDays--;
+    }
+    
+    printf("Dracula can indulge in his favorite menu %d times in the next %d days before Halloween.\n", count, N);
+
+    return 0;
+}
