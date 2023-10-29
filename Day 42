@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int P, Q;
+    // Input the scores for Alice and Bob
+    printf("Enter the score for Alice: ");
+    scanf("%d", &P);
+    printf("Enter the score for Bob: ");
+    scanf("%d", &Q);
+
+    int total_points = P + Q;
+    if (total_points % 4 == 0) {
+        printf("It's Alice's serve.\n");
+    } else if (total_points % 4 == 2) {
+        printf("It's Bob's serve.\n");
+    } else {
+        printf("Invalid scores. Please check the input.\n");
+    }
+
+    return 0;
+}
