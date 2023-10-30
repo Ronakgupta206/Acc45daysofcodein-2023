@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int N, M;
+    double discount = 0.1; // 10% discount
+
+    // Input the cost of online order and restaurant
+    printf("Enter the cost of online order (N rupees): ");
+    scanf("%d", &N);
+    printf("Enter the cost of eating at the restaurant (M rupees): ");
+    scanf("%d", &M);
+
+    // Calculate the discounted online order cost
+    double discountedOnlineCost = N - (N * discount);
+
+    // Compare the costs and determine the cheaper option
+    if (discountedOnlineCost < M) {
+        printf("It's cheaper to order food online. Cost: %.2lf rupees\n", discountedOnlineCost);
+    } else if (M < discountedOnlineCost) {
+        printf("It's cheaper to eat at the restaurant. Cost: %d rupees\n", M);
+    } else {
+        printf("The costs are the same. You can choose either option.\n");
+    }
+
+    return 0;
+}
