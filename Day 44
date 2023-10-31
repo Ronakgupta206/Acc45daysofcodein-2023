@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y;
+    scanf("%d %d", &X, &Y);
+    
+    int normal_speed_time = X - Y;
+    int twice_speed_time = Y / 2;
+    
+    int total_time = normal_speed_time + twice_speed_time;
+    
+    printf("%d\n", total_time);
+    
+    return 0;
+}
